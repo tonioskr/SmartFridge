@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="700.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.SmartFridge.Controller.ViewRecipeController">
+<children>
+    <Pane prefHeight="155.0" prefWidth="1000.0" style="-fx-background-color: #00bfff;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <children>
+            <Label layoutX="291.0" layoutY="32.0" text="Comment the recipe" textFill="WHITE">
+                <font>
+                    <Font size="50.0" />
+                </font>
+            </Label>
+        </children>
+    </Pane>
+    <GridPane alignment="CENTER" layoutX="165.0" layoutY="180.0" prefHeight="374.0" prefWidth="511.0" AnchorPane.leftAnchor="165.0" AnchorPane.rightAnchor="165.0">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="121.0" minWidth="10.0" prefWidth="121.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="85.0" minWidth="10.0" prefWidth="18.0" />
+            <ColumnConstraints maxWidth="535.0" minWidth="502.0" prefWidth="535.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="32.0" minHeight="6.0" prefHeight="28.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="57.0" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="37.0" minHeight="0.0" prefHeight="17.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="80.0" minHeight="10.0" prefHeight="48.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="58.0" minHeight="10.0" prefHeight="26.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="83.0" minHeight="10.0" prefHeight="78.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints />
+        </rowConstraints>
+        <children>
+            <Label prefHeight="27.0" prefWidth="113.0" text="Title:">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font></Label>
+            <Label fx:id="RecipeTitle" GridPane.columnIndex="2">
+            </Label>
+
+            <Label prefHeight="27.0" prefWidth="109.0" text="Author:" GridPane.rowIndex="1">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font></Label>
+            <Label fx:id="RecipeAuthor" GridPane.columnIndex="2" GridPane.rowIndex="1">
+            </Label>
+
+            <Label prefHeight="27.0" prefWidth="120.0" text="Ingredients:" GridPane.rowIndex="2">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font></Label>
+            <VBox prefHeight="200.0" prefWidth="500.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                <TextArea fx:id="RecipeIngredients" editable="false" prefHeight="100.0" prefWidth="300.0" promptText="Write the ingredients..." stylesheets="@css/style.css" wrapText="true">
+                  <font>
+                     <Font size="14.0" />
+                  </font>
+                  <cursor>
+                     <Cursor fx:constant="DEFAULT" />
+                  </cursor></TextArea>
+            </VBox>
+
+            <Label prefHeight="27.0" prefWidth="114.0" text="Directions:" GridPane.rowIndex="4">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font></Label>
+            <VBox prefHeight="200.0" prefWidth="500.0" GridPane.columnIndex="2" GridPane.rowIndex="4">
+                <TextArea fx:id="RecipeDirections" editable="false" prefHeight="130.0" prefWidth="300.0" promptText="Write the directions..." stylesheets="@css/style.css" wrapText="true">
+                  <font>
+                     <Font size="14.0" />
+                  </font>
+                  <cursor>
+                     <Cursor fx:constant="DEFAULT" />
+                  </cursor></TextArea>
+            </VBox>
+
+            <VBox prefHeight="200.0" prefWidth="500.0" GridPane.columnIndex="2" GridPane.rowIndex="6">
+                <children>
+                    <TextArea fx:id="ReviewText" prefHeight="100.0" prefWidth="300.0" promptText="Write your opinion..." wrapText="true" GridPane.columnIndex="2" GridPane.rowIndex="6">
+                     <font>
+                        <Font size="14.0" />
+                     </font></TextArea>
+                </children>
+            </VBox>
+            <Group GridPane.columnIndex="2" GridPane.rowIndex="7">
+               <children>
+      
+                <RadioButton mnemonicParsing="false" selected="true" text="1" textFill="DARKGRAY">
+                    <toggleGroup>
+                        <ToggleGroup fx:id="Rate" />
+                    </toggleGroup>
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </RadioButton>
+                <RadioButton layoutX="33.0" mnemonicParsing="false" text="2" textFill="DARKGRAY" toggleGroup="$Rate">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </RadioButton>
+                <RadioButton layoutX="80.0" mnemonicParsing="false" text="3" textFill="DARKGRAY" toggleGroup="$Rate">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </RadioButton>
+                <RadioButton layoutX="120.0" mnemonicParsing="false" text="4" textFill="DARKGRAY" toggleGroup="$Rate">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </RadioButton>
+                <RadioButton layoutX="160.0" mnemonicParsing="false" text="5" textFill="DARKGRAY" toggleGroup="$Rate">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </RadioButton>
+               </children>
+            </Group>
+            <Label layoutX="10.0" layoutY="162.0" prefHeight="27.0" prefWidth="114.0" text="Vote:" GridPane.rowIndex="7">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="invalidSubmit" prefHeight="27.0" prefWidth="522.0" GridPane.columnIndex="2" GridPane.rowIndex="8">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+        </children>
+    </GridPane>
+    <Button alignment="CENTER" contentDisplay="CENTER" layoutX="434.0" layoutY="575.0" mnemonicParsing="false" onAction="#goToComments" onMouseEntered="#setOver" onMouseExited="#unsetOver" onMousePressed="#setClick" onMouseReleased="#unsetClick" prefHeight="50.0" prefWidth="170.0" style="-fx-background-color: #24a0ed; -fx-text-fill: white; -fx-border-radius: 5; -fx-border-width: 2; -fx-border-color: #24a0ed;" text="View comments">
+        <font>
+            <Font size="15.0" />
+        </font>
+    </Button>
+
+    <Button alignment="CENTER" contentDisplay="CENTER" layoutX="653.0" layoutY="574.0" mnemonicParsing="false" onAction="#submitComment" onMouseEntered="#setOver" onMouseExited="#unsetOver" onMousePressed="#setClick" onMouseReleased="#unsetClick" prefHeight="50.0" prefWidth="170.0" style="-fx-background-color: #24a0ed; -fx-text-fill: white; -fx-border-radius: 5; -fx-border-width: 2; -fx-border-color: #24a0ed;" text="Submit comment">
+        <font>
+            <Font size="15.0" />
+        </font>
+    </Button>
+    <Button alignment="CENTER" contentDisplay="CENTER" layoutX="203.0" layoutY="575.0" mnemonicParsing="false" onAction="#goBack" onMouseEntered="#setOver" onMouseExited="#unsetOver" onMousePressed="#setClick" onMouseReleased="#unsetClick" prefHeight="50.0" prefWidth="170.0" style="-fx-background-color: #24a0ed; -fx-text-fill: white; -fx-border-radius: 5; -fx-border-width: 2; -fx-border-color: #24a0ed;" text="Back">
+        <font>
+            <Font size="15.0" />
+        </font>
+    </Button>
+</children>
+</AnchorPane>

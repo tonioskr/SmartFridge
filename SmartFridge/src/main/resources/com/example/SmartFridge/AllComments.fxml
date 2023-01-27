@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="700.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.SmartFridge.Controller.AllCommentsController">
+    <children>
+      <Pane prefHeight="164.0" prefWidth="1000.0" style="-fx-background-color: #24a0ed;">
+         <children>
+            <Label layoutX="350.0" layoutY="40.0" prefHeight="70.0" prefWidth="422.0" text="COMMENTS" textFill="#f5f2f2">
+               <font>
+                  <Font name="System Bold" size="48.0" />
+               </font>
+            </Label>
+            <Button layoutX="708.0" layoutY="48.0" mnemonicParsing="false" onAction="#showclick" prefHeight="55.0" prefWidth="114.0" style="-fx-background-color: yellow;" text="SHOW MORE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="backbutton" layoutX="845.0" layoutY="48.0" mnemonicParsing="false" onAction="#goBack" prefHeight="55.0" prefWidth="114.0" style="-fx-background-color: orange;" text="BACK">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children></Pane>
+        <ScrollPane fx:id="Box" layoutY="165.0" prefHeight="535.0" prefWidth="1000.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="165.0">
+
+        </ScrollPane>
+    </children>
+</AnchorPane>

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane maxHeight="700.0" maxWidth="1000.0" minHeight="700.0" minWidth="1000.0" prefHeight="700.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.SmartFridge.Controller.AnalyticsController">
+    <top>
+        <ToolBar prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #00bfff;" BorderPane.alignment="CENTER">
+            <items>
+                <Button lineSpacing="10.0" mnemonicParsing="false" prefHeight="0.0" prefWidth="146.0" style="-fx-background-color: transparent;">
+                    <graphic>
+                        <ImageView fitHeight="45.0" fitWidth="105.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@img/logo.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                </Button>
+                <Label alignment="CENTER" contentDisplay="CENTER" layoutX="450.0" layoutY="20.0" prefHeight="45.0" prefWidth="250.0" text="All the ingredient">
+                    <font>
+                        <Font size="25.0" />
+                    </font>
+                </Label>
+                <Pane prefHeight="6.0" prefWidth="533.0" />
+            </items>
+        </ToolBar>
+    </top>
+    <left>
+        <!-- An AnchorPane in the Left BorderPane -->
+        <AnchorPane fx:id="my_anchor_pane" prefHeight="645.0" prefWidth="577.0" BorderPane.alignment="CENTER">
+            <children>
+            <Pane layoutX="25.0" layoutY="16.0" prefHeight="600.0" prefWidth="534.0" style="-fx-border-color: #24a0ed; -fx-border-radius: 20;" />
+            <Pane prefHeight="645.0" prefWidth="577.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <GridPane fx:id="left2" layoutX="59.0" layoutY="35.0" prefHeight="555.0" prefWidth="457.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="457.0" minWidth="10.0" prefWidth="316.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="193.0" minWidth="10.0" prefWidth="139.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="223.0" minWidth="3.0" prefWidth="3.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints maxHeight="32.0" minHeight="0.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="60.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="45.0" minHeight="10.0" prefHeight="35.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="29.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                  </GridPane>
+               </children>
+            </Pane>
+            <Pane layoutX="6.0" prefHeight="645.0" prefWidth="577.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="6.0" AnchorPane.rightAnchor="-6.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <GridPane fx:id="left3" layoutX="47.0" layoutY="47.0" prefHeight="521.0" prefWidth="455.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="235.0" minWidth="10.0" prefWidth="235.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="193.0" minWidth="10.0" prefWidth="152.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="146.0" minWidth="7.0" prefWidth="129.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints maxHeight="32.0" minHeight="0.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="60.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="45.0" minHeight="10.0" prefHeight="35.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="29.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                  </GridPane>
+               </children>
+            </Pane>
+            </children>
+        </AnchorPane>
+    </left>
+    <!-- Ending of the left part of the Borderpane -->
+
+    <!-- Beginning of the right part of the Borderpane -->
+
+    <right>
+        <AnchorPane prefHeight="645.0" prefWidth="418.0" BorderPane.alignment="CENTER">
+            <children>
+                
+            <Group layoutX="13.0" layoutY="14.0">
+               <children>
+                      <Button fx:id="ingredientsByCountry" layoutX="7.0" mnemonicParsing="false" onAction="#ingredientsByCountry" onMouseEntered="#setOver" onMouseExited="#unsetOver" onMousePressed="#setClick" onMouseReleased="#unsetClick" prefHeight="60.0" prefWidth="181.0" style="-fx-background-color: #24a0ed; -fx-text-fill: white; -fx-border-radius: 5; -fx-border-width: 2; -fx-border-color: #24a0ed;" text="Top ingredient by country" />
+                      <Button fx:id="top10Ingredients" layoutX="5.0" layoutY="82.0" mnemonicParsing="false" onAction="#show_most_10_ingredients" onMouseEntered="#setOver" onMouseExited="#unsetOver" onMousePressed="#setClick" onMouseReleased="#unsetClick" prefHeight="60.0" prefWidth="183.0" style="-fx-background-color: #24a0ed; -fx-text-fill: white; -fx-border-radius: 5; -fx-border-width: 2; -fx-border-color: #24a0ed;" text="Top ingredients" />
+               </children>
+            </Group>
+                <Button fx:id="userMostCommented" layoutX="214.0" layoutY="14.0" mnemonicParsing="false" onAction="#show_userMostCommented" onMouseEntered="#setOver" onMouseExited="#unsetOver" onMousePressed="#setClick" onMouseReleased="#unsetClick" prefHeight="60.0" prefWidth="189.0" style="-fx-background-color: #24a0ed; -fx-text-fill: white; -fx-border-radius: 5; -fx-border-width: 2; -fx-border-color: #24a0ed;" text="Top user" />
+                <Button fx:id="Top10Recipes" layoutX="214.0" layoutY="93.0" mnemonicParsing="false" onAction="#show_most_10_recipes" onMouseEntered="#setOver" onMouseExited="#unsetOver" onMousePressed="#setClick" onMouseReleased="#unsetClick" prefHeight="60.0" prefWidth="193.0" style="-fx-background-color: #24a0ed; -fx-text-fill: white; -fx-border-radius: 5; -fx-border-width: 2; -fx-border-color: #24a0ed;" text="Top recipe" />
+                <Button alignment="CENTER" contentDisplay="CENTER" layoutX="114.0" layoutY="174.0" mnemonicParsing="false" onAction="#goBack" onMouseEntered="#setOver" onMouseExited="#unsetOver" onMousePressed="#setClick" onMouseReleased="#unsetClick" prefHeight="60.0" prefWidth="191.0" style="-fx-background-color: #24a0ed; -fx-text-fill: white; -fx-border-radius: 5; -fx-border-width: 2; -fx-border-color: #24a0ed;" text="Back">
+                    <font>
+                        <Font size="15.0" />
+                    </font>
+                </Button>
+            <PieChart fx:id="piechart" layoutX="28.0" layoutY="247.0" prefHeight="377.0" prefWidth="370.0" />
+            </children>
+        </AnchorPane>
+    </right>
+
+</BorderPane>

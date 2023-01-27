@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane maxHeight="550.0" maxWidth="1000.0" minHeight="550.0" minWidth="1000.0" prefHeight="550.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.SmartFridge.Controller.AllRecipesController">
+    <left>
+        <!-- An AnchorPane in the Left BorderPane -->
+        <AnchorPane fx:id="bottom" prefHeight="700.0" prefWidth="500.0" BorderPane.alignment="CENTER">
+            <children>
+                <TableView fx:id="AllRecipesTable" layoutX="25.0" layoutY="14.0" prefHeight="477.0" prefWidth="451.0">
+                    <columns>
+                        <TableColumn fx:id="RecipeNameColumn" prefWidth="203.0" text="Name" />
+                        <TableColumn fx:id="ReviewCount" prefWidth="141.0" text="Number of Reviews" />
+                        <TableColumn fx:id="TotalTime" prefWidth="94.0" text="Total time" />
+                    </columns>
+                </TableView>
+                <Button fx:id="previousButton" layoutX="150.0" layoutY="501.0" mnemonicParsing="false" onAction="#onPreviousClick" onMouseEntered="#setOver" onMouseExited="#unsetOver" onMousePressed="#setClick" onMouseReleased="#unsetClick" prefHeight="35.0" prefWidth="70.0" style="-fx-background-color: #24a0ed; -fx-text-fill: white; -fx-border-radius: 5; -fx-border-width: 2; -fx-border-color: #24a0ed;" text="Previous" />
+                <Button fx:id="nextButton" defaultButton="true" layoutX="280.0" layoutY="501.0" mnemonicParsing="false" onAction="#onNextClick" onMouseEntered="#setOver" onMouseExited="#unsetOver" onMousePressed="#setClick" onMouseReleased="#unsetClick" prefHeight="35.0" prefWidth="70.0" style="-fx-background-color: #24a0ed; -fx-text-fill: white; -fx-border-radius: 5; -fx-border-width: 2; -fx-border-color: #24a0ed;" text="Next">
+                    <font>
+                        <Font size="15.0" />
+                    </font>
+                </Button>
+                <Text fx:id="pagenumber" layoutX="244.0" layoutY="524.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" wrappingWidth="15.0">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Text>
+            <Button fx:id="backbutton" layoutX="39.0" layoutY="501.0" mnemonicParsing="false" onAction="#goToHome" onMouseEntered="#setOver" onMouseExited="#unsetOver" onMousePressed="#setClick" onMouseReleased="#unsetClick" prefHeight="35.0" prefWidth="70.0" style="-fx-background-color: #24a0ed; -fx-text-fill: white; -fx-border-radius: 5; -fx-border-width: 2; -fx-border-color: #24a0ed;" text="BACK" visible="false" />
+            </children>
+        </AnchorPane>
+    </left>
+    <!-- Ending of the left part of the Borderpane -->
+
+    <!-- Beginning of the right part of the Borderpane -->
+    <right>
+        <AnchorPane prefHeight="400.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+            <children>
+            <Group layoutX="100.0" layoutY="80.0">
+               <children>
+                  <Pane layoutX="-25.0" layoutY="-38.0" prefHeight="493.0" prefWidth="351.0" style="-fx-border-color: #24a0ed; -fx-border-radius: 20;">
+                     <children>
+                        <Button fx:id="commentbutton" layoutX="26.0" layoutY="419.0" mnemonicParsing="false" onAction="#commentclick" onMouseEntered="#setOver" onMouseExited="#unsetOver" onMousePressed="#setClick" onMouseReleased="#unsetClick" prefHeight="60.0" prefWidth="300.0" style="-fx-background-color: #24a0ed; -fx-text-fill: white; -fx-border-radius: 5; -fx-border-width: 2; -fx-border-color: #24a0ed;" text="Comments">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Button>
+                     </children></Pane>
+                  <Group layoutY="64.0">
+                     <children>
+                            <Button fx:id="show_recipe_of_followed_user" layoutY="1.0" mnemonicParsing="false" onAction="#show_recipe_of_followed_user" onMouseEntered="#setOver" onMouseExited="#unsetOver" onMousePressed="#setClick" onMouseReleased="#unsetClick" prefHeight="60.0" prefWidth="300.0" style="-fx-background-color: #24a0ed; -fx-text-fill: white; -fx-border-radius: 5; -fx-border-width: 2; -fx-border-color: #24a0ed;" text="Show recipe of followed user">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Button>
+                            <Button fx:id="show_suggested_recipe" layoutY="81.0" mnemonicParsing="false" onAction="#show_suggested_recipe" onMouseEntered="#setOver" onMouseExited="#unsetOver" onMousePressed="#setClick" onMouseReleased="#unsetClick" prefHeight="60.0" prefWidth="300.0" style="-fx-background-color: #24a0ed; -fx-text-fill: white; -fx-border-radius: 5; -fx-border-width: 2; -fx-border-color: #24a0ed;" text="Show me suggested recipe">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Button>
+                            <Button fx:id="showMyRecipe" layoutY="156.0" mnemonicParsing="false" onAction="#showMyRecipe" onMouseEntered="#setOver" onMouseExited="#unsetOver" onMousePressed="#setClick" onMouseReleased="#unsetClick" prefHeight="60.0" prefWidth="300.0" style="-fx-background-color: #24a0ed; -fx-text-fill: white; -fx-border-radius: 5; -fx-border-width: 2; -fx-border-color: #24a0ed;" text="Show my published recipe">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="add_recipe" layoutY="237.0" mnemonicParsing="false" onMouseEntered="#setOver" onMouseExited="#unsetOver" onMousePressed="#setClick" onMouseReleased="#unsetClick" prefHeight="60.0" prefWidth="300.0" style="-fx-background-color: #24a0ed; -fx-text-fill: white; -fx-border-radius: 5; -fx-border-width: 2; -fx-border-color: #24a0ed;" text="Add new recipe">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </Group>
+                  <TextField fx:id="SearchRecipe" layoutX="1.0" prefHeight="33.0" prefWidth="298.0" promptText="Seach for a recipe" />
+               </children>
+            </Group>
+            </children>
+        </AnchorPane>
+    </right>
+
+</BorderPane>

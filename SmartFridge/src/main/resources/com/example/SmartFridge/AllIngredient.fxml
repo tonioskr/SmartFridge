@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane maxHeight="609.0" maxWidth="1000.0" minHeight="550.0" minWidth="1000.0" prefHeight="609.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.SmartFridge.Controller.AllIngredientsController">
+    <!-- Ending of the left part of the Borderpane -->
+
+    <!-- Beginning of the right part of the Borderpane -->
+    <right>
+        <AnchorPane prefHeight="599.0" prefWidth="601.0" BorderPane.alignment="CENTER">
+            <children>
+            <Pane layoutX="19.0" layoutY="28.0" prefHeight="498.0" prefWidth="530.0" style="-fx-border-color: #24a0ed; -fx-border-radius: 10;">
+               <children>
+                  <Text fx:id="info" layoutX="46.0" layoutY="382.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Insert quantity and expiring data below:" wrappingWidth="468.13671875">
+                     <font>
+                        <Font name="System Italic" size="16.0" />
+                     </font>
+                  </Text>
+                  <Button fx:id="Submit_in_fridge" layoutX="433.0" layoutY="358.0" mnemonicParsing="false" onAction="#onNextClick" onMouseEntered="#setOver" onMouseExited="#unsetOver" onMousePressed="#setClick" onMouseReleased="#unsetClick" prefHeight="35.0" prefWidth="70.0" style="-fx-background-color: #24a0ed; -fx-text-fill: white; -fx-border-radius: 5; -fx-border-width: 2; -fx-border-color: #24a0ed;" text="Add" />
+               </children></Pane>
+                <GridPane fx:id="Right" alignment="CENTER" layoutX="85.0" layoutY="36.0" prefHeight="469.0" prefWidth="373.0" AnchorPane.leftAnchor="85.0" AnchorPane.rightAnchor="143.0">
+                <columnConstraints>
+                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="505.0" minWidth="50.0" prefWidth="183.0" />
+                    <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" maxWidth="368.0" minWidth="0.0" prefWidth="190.0" />
+                </columnConstraints>
+                <rowConstraints>
+                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                </rowConstraints>
+                </GridPane>
+            <Button fx:id="deletebutton" layoutX="85.0" layoutY="544.0" mnemonicParsing="false" onAction="#onPreviousClick" onMouseEntered="#setOver" onMouseExited="#unsetOver" onMousePressed="#setClick" onMouseReleased="#unsetClick" prefHeight="35.0" prefWidth="120.0" style="-fx-background-color: #24a0ed; -fx-text-fill: white; -fx-border-radius: 5; -fx-border-width: 2; -fx-border-color: #24a0ed;" text="DELETE" visible="false" />
+            <Button fx:id="modifybutton" layoutX="231.0" layoutY="544.0" mnemonicParsing="false" onAction="#onPreviousClick" onMouseEntered="#setOver" onMouseExited="#unsetOver" onMousePressed="#setClick" onMouseReleased="#unsetClick" prefHeight="35.0" prefWidth="130.0" style="-fx-background-color: #24a0ed; -fx-text-fill: white; -fx-border-radius: 5; -fx-border-width: 2; -fx-border-color: #24a0ed;" text="MODIFY" visible="false" />
+            <Button fx:id="addrecipebutton" layoutX="387.0" layoutY="544.0" mnemonicParsing="false" onAction="#onPreviousClick" onMouseEntered="#setOver" onMouseExited="#unsetOver" onMousePressed="#setClick" onMouseReleased="#unsetClick" prefHeight="35.0" prefWidth="113.0" style="-fx-background-color: #24a0ed; -fx-text-fill: white; -fx-border-radius: 5; -fx-border-width: 2; -fx-border-color: #24a0ed;" text="ADD RECIPE" visible="false" />
+            </children>
+
+        </AnchorPane>
+    </right>
+   <center>
+        <!-- An AnchorPane in the Left BorderPane -->
+        <AnchorPane fx:id="my_anchor_pane" prefHeight="641.0" BorderPane.alignment="CENTER">
+            <children>
+            <Pane layoutX="177.0" layoutY="510.0" opacity="0.69" prefHeight="29.0" prefWidth="30.0" style="-fx-background-color: #24a0ed; -fx-background-radius: 10;">
+               <children>
+                      <Text fx:id="pagenumber" layoutX="4.0" layoutY="14.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" textAlignment="CENTER" textOrigin="CENTER" wrappingWidth="20.546875">
+                          <font>
+                              <Font size="14.0" />
+                          </font>
+                      </Text>
+               </children></Pane>
+                <TextField fx:id="SearchIngredient" layoutX="41.0" layoutY="50.0" onAction="#startsearch" onKeyReleased="#Search_for_ingredient" prefHeight="25.0" prefWidth="227.0" promptText="Seach for a ingredient" />
+                <Button fx:id="SearchIngredientButton" layoutX="296.0" layoutY="45.0" mnemonicParsing="false" onAction="#Search_for_ingredient" onMouseEntered="#setOver" onMouseExited="#unsetOver" onMousePressed="#setClick" onMouseReleased="#unsetClick" prefHeight="35.0" prefWidth="70.0" style="-fx-background-color: #24a0ed; -fx-text-fill: white; -fx-border-radius: 5; -fx-border-width: 2; -fx-border-color: #24a0ed;" text="Search" />
+
+                <TableView fx:id="AllProductsTable" layoutX="20.0" layoutY="92.0" prefHeight="405.0" prefWidth="374.0">
+                    <columns>
+                        <TableColumn fx:id="ProductNameColumn" prefWidth="290.0" text="Name" />
+                        <TableColumn fx:id="QuantityInMyFridge" minWidth="9.0" prefWidth="78.0" text="Calories" />
+                    </columns>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+                </TableView>
+
+                <Button fx:id="nextButton" defaultButton="true" layoutX="215.0" layoutY="507.0" mnemonicParsing="false" onAction="#onNextClick" onMouseEntered="#setOver" onMouseExited="#unsetOver" onMousePressed="#setClick" onMouseReleased="#unsetClick" prefHeight="35.0" prefWidth="70.0" style="-fx-background-color: #24a0ed; -fx-text-fill: white; -fx-border-radius: 5; -fx-border-width: 2; -fx-border-color: #24a0ed;" text="Next">
+                    <font>
+                        <Font size="15.0" />
+                    </font>
+                </Button>
+                <Button fx:id="previousButton" layoutX="100.0" layoutY="507.0" mnemonicParsing="false" onAction="#onPreviousClick" onMouseEntered="#setOver" onMouseExited="#unsetOver" onMousePressed="#setClick" onMouseReleased="#unsetClick" prefHeight="35.0" prefWidth="70.0" style="-fx-background-color: #24a0ed; -fx-text-fill: white; -fx-border-radius: 5; -fx-border-width: 2; -fx-border-color: #24a0ed;" text="Previous" />
+            <Slider fx:id="slider" layoutX="43.0" layoutY="20.0" max="1000.0" prefHeight="14.0" prefWidth="318.0" value="1000.0" />
+            <Text layoutX="157.0" layoutY="18.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Max Calories:" />
+            <Text fx:id="calories" layoutX="240.0" layoutY="18.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1000" />
+            <Button fx:id="backbutton" layoutX="14.0" layoutY="507.0" mnemonicParsing="false" onAction="#goToHome" onMouseEntered="#setOver" onMouseExited="#unsetOver" onMousePressed="#setClick" onMouseReleased="#unsetClick" prefHeight="35.0" prefWidth="70.0" style="-fx-background-color: #24a0ed; -fx-text-fill: white; -fx-border-radius: 5; -fx-border-width: 2; -fx-border-color: #24a0ed;" text="BACK" visible="false" />
+            </children>
+        </AnchorPane>
+   </center>
+
+</BorderPane>

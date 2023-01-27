@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane prefHeight="700.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.SmartFridge.Controller.AllUsersController">
+    <bottom>
+        <Pane prefHeight="703.0" prefWidth="1000.0" BorderPane.alignment="CENTER">
+            <children>
+            <Group layoutX="599.0" layoutY="94.0">
+               <children>
+                  <Pane layoutX="-35.0" layoutY="-37.0" prefHeight="376.0" prefWidth="379.0" style="-fx-border-color: #24a0ed; -fx-border-radius: 10;" />
+                      <TextField fx:id="SearchUser" layoutX="15.0" prefHeight="25.0" prefWidth="271.0" promptText="Seach for a user">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </TextField>
+                      <Button fx:id="SearchUserButton" layoutY="63.0" mnemonicParsing="false" onAction="#Search_for_user" onMouseEntered="#setOver" onMouseExited="#unsetOver" onMousePressed="#setClick" onMouseReleased="#unsetClick" prefHeight="60.0" prefWidth="300.0" style="-fx-background-color: #24a0ed; -fx-text-fill: white; -fx-border-radius: 5; -fx-border-width: 2; -fx-border-color: #24a0ed;" text="Search" />
+      
+                      <Button fx:id="show_more" alignment="CENTER" contentDisplay="CENTER" layoutY="243.0" mnemonicParsing="false" onAction="#fillTable" onMouseEntered="#setOver" onMouseExited="#unsetOver" onMousePressed="#setClick" onMouseReleased="#unsetClick" prefHeight="60.0" prefWidth="300.0" style="-fx-background-color: #24a0ed; -fx-text-fill: white; -fx-border-radius: 5; -fx-border-width: 2; -fx-border-color: #24a0ed;" text="Show more">
+                          <font>
+                              <Font size="15.0" />
+                          </font>
+                      </Button>
+                      <Button fx:id="backbutton" alignment="CENTER" contentDisplay="CENTER" layoutY="342.0" mnemonicParsing="false" onAction="#goToHome" onMouseEntered="#setOver" onMouseExited="#unsetOver" onMousePressed="#setClick" onMouseReleased="#unsetClick" prefHeight="60.0" prefWidth="300.0" style="-fx-background-color: #24a0ed; -fx-text-fill: white; -fx-border-radius: 5; -fx-border-width: 2; -fx-border-color: #24a0ed;" text="Back " visible="false">
+                          <font>
+                              <Font size="15.0" />
+                          </font>
+                      </Button>
+                      <Button fx:id="Show_Suggested_User" layoutY="151.0" mnemonicParsing="false" onAction="#show_suggested_user" onMouseEntered="#setOver" onMouseExited="#unsetOver" onMousePressed="#setClick" onMouseReleased="#unsetClick" prefHeight="60.0" prefWidth="300.0" style="-fx-background-color: #24a0ed; -fx-text-fill: white; -fx-border-radius: 5; -fx-border-width: 2; -fx-border-color: #24a0ed;" text="Show Suggested User" />
+               </children>
+            </Group>
+
+                <TableView fx:id="UserTable" layoutX="48.0" layoutY="64.0" prefHeight="477.0" prefWidth="470.0">
+                    <columns>
+                        <TableColumn fx:id="UsernameColumn" prefWidth="200" text="Username" />
+                        <TableColumn fx:id="CountryColumn" prefWidth="155" text="Country" />
+                        <TableColumn fx:id="FollowButtonColumn" prefWidth="120" text="Follow" />
+                    </columns>
+                </TableView>
+            </children>
+        </Pane>
+    </bottom>
+</BorderPane>

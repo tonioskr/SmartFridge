@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="700.0" maxWidth="1000.0" minHeight="700.0" minWidth="1000.0" prefHeight="700.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.SmartFridge.Controller.HomePageController">
+   <children>
+      <TabPane fx:id="tabPane" layoutX="247.0" layoutY="65.0" prefHeight="635.0" prefWidth="1000.0" stylesheets="@css/tab.css" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="65.0">
+        <tabs>
+          <Tab closable="false" style="-fx--cursor: HAND;" text="Ingredients">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="586.0" prefWidth="1000.0" />
+                <fx:include fx:id="ProductTab" source="AllIngredient.fxml" />
+            </content>
+          </Tab>
+          <Tab text="Recipes">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                <fx:include fx:id="RecipeTab" source="AllRecipes.fxml" />
+            </content>
+          </Tab>
+            <Tab fx:id="tabuser" text="Users">
+                <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                        <fx:include fx:id="UserTab" source="AllUsers.fxml" />
+                </content>
+            </Tab>
+            <Tab text="Following">
+                <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                        <fx:include fx:id="FollowTab" source="FollowedUser.fxml" />
+                </content>
+            </Tab>
+            <Tab text="Fridge">
+                <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                        <fx:include fx:id="FridgeTab" source="FridgePage.fxml" />
+                </content>
+            </Tab>
+            <Tab text="Profile">
+                <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                        <fx:include fx:id="ProfileTab" source="ProfilePage.fxml" />
+                </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+      <Pane layoutY="-1.0" prefHeight="72.0" prefWidth="1000.0" style="-fx-background-color: #24a0ed;">
+         <children>
+            <Label layoutX="349.0" prefHeight="80.0" prefWidth="441.0" text="SMARTFRIDGE" textFill="#fcf8f8">
+               <font>
+                  <Font size="54.0" />
+               </font>
+            </Label>
+            <Button fx:id="logoutbutton" contentDisplay="CENTER" layoutX="829.0" layoutY="14.0" mnemonicParsing="false" onAction="#logout" onMousePressed="#setClick" onMouseReleased="#unsetClick" prefHeight="42.0" prefWidth="62.0" style="-fx-background-color: yellow;" text="Logout">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <effect>
+                  <Glow />
+               </effect>
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Button>
+            <Button contentDisplay="CENTER" layoutX="912.0" layoutY="14.0" mnemonicParsing="false" onAction="#leave" onMousePressed="#setClick" onMouseReleased="#unsetClick" prefHeight="42.0" prefWidth="62.0" style="-fx-background-color: orange;" text="Leave">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <effect>
+                  <Glow />
+               </effect>
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
